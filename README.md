@@ -1,142 +1,39 @@
- **terraform plan**
-aws_s3_bucket.finance: Refreshing state... [id=finanace-le03]
+Usage: terraform [global options] <subcommand> [args]
 
-Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the
-following symbols:
-  + create
+The available commands for execution are listed below.
+The primary workflow commands are given first, followed by
+less common or more advanced commands.
 
-Terraform will perform the following actions:
+Main commands:
+  init          Prepare your working directory for other commands
+  validate      Check whether the configuration is valid
+  plan          Show changes required by the current configuration
+  apply         Create or update infrastructure
+  destroy       Destroy previously-created infrastructure
 
-  # aws_s3_bucket_object.finance-2020 will be created
-  + resource "aws_s3_bucket_object" "finance-2020" {
-      + acl                    = "private"
-      + arn                    = (known after apply)
-      + bucket                 = "finanace-le03"
-      + bucket_key_enabled     = (known after apply)
-      + content                = "finance-2020.doc"
-      + content_type           = (known after apply)
-      + etag                   = (known after apply)
-      + force_destroy          = false
-      + id                     = (known after apply)
-      + key                    = "finance-2020.doc"
-      + kms_key_id             = (known after apply)
-      + server_side_encryption = (known after apply)
-      + storage_class          = (known after apply)
-      + tags_all               = (known after apply)
-      + version_id             = (known after apply)
-    }
+All other commands:
+  console       Try Terraform expressions at an interactive command prompt
+  fmt           Reformat your configuration in the standard style
+  force-unlock  Release a stuck lock on the current workspace
+  get           Install or upgrade remote Terraform modules
+  graph         Generate a Graphviz graph of the steps in an operation
+  import        Associate existing infrastructure with a Terraform resource
+  login         Obtain and save credentials for a remote host
+  logout        Remove locally-stored credentials for a remote host
+  metadata      Metadata related commands
+  modules       Show all declared modules in a working directory
+  output        Show output values from your root module
+  providers     Show the providers required for this configuration
+  refresh       Update the state to match remote systems
+  show          Show the current state or a saved plan
+  state         Advanced state management
+  taint         Mark a resource instance as not fully functional
+  untaint       Remove the 'tainted' state from a resource instance
+  version       Show the current Terraform version
+  workspace     Workspace management
 
-Plan: 1 to add, 0 to change, 0 to destroy.
-╷
-│ Warning: Deprecated Resource
-│
-│   with aws_s3_bucket_object.finance-2020,
-│   on main.tf line 13, in resource "aws_s3_bucket_object" "finance-2020":
-│   13:  resource "aws_s3_bucket_object" "finance-2020" {
-│
-│ use the aws_s3_object resource instead
-│
-│ (and one more similar warning elsewhere)
-╵
-╷
-│ Warning: Argument is deprecated
-│
-│   with aws_s3_bucket_object.finance-2020,
-│   on main.tf line 15, in resource "aws_s3_bucket_object" "finance-2020":
-│   15:    key  = "finance-2020.doc"
-│
-│ key is deprecated. Use the aws_s3_object resource instead.
-│
-│ (and 2 more similar warnings elsewhere)
-╵
-
-───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-
-Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if
-you run "terraform apply" now.
-
-terraform apply
-
-PS C:\Users\shabb\OneDrive\Desktop\AWS\s3b> terraform apply
-aws_s3_bucket.finance: Refreshing state... [id=finanace-le03]
-
-Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the
-following symbols:
-  + create
-
-Terraform will perform the following actions:
-
-  # aws_s3_bucket_object.finance-2020 will be created
-  + resource "aws_s3_bucket_object" "finance-2020" {
-      + acl                    = "private"
-      + arn                    = (known after apply)
-      + bucket                 = "finanace-le03"
-      + bucket_key_enabled     = (known after apply)
-      + content                = "finance-2020.doc"
-      + content_type           = (known after apply)
-      + etag                   = (known after apply)
-      + force_destroy          = false
-      + id                     = (known after apply)
-      + key                    = "finance-2020.doc"
-      + kms_key_id             = (known after apply)
-      + server_side_encryption = (known after apply)
-      + storage_class          = (known after apply)
-      + tags_all               = (known after apply)
-      + version_id             = (known after apply)
-    }
-
-Plan: 1 to add, 0 to change, 0 to destroy.
-╷
-│ Warning: Deprecated Resource
-│
-│   with aws_s3_bucket_object.finance-2020,
-│   on main.tf line 13, in resource "aws_s3_bucket_object" "finance-2020":
-│   13:  resource "aws_s3_bucket_object" "finance-2020" {
-│
-│ use the aws_s3_object resource instead
-│
-│ (and one more similar warning elsewhere)
-╵
-╷
-│ Warning: Argument is deprecated
-│
-│   with aws_s3_bucket_object.finance-2020,
-│   on main.tf line 15, in resource "aws_s3_bucket_object" "finance-2020":
-│   15:    key  = "finance-2020.doc"
-│
-│ key is deprecated. Use the aws_s3_object resource instead.
-│
-│ (and 2 more similar warnings elsewhere)
-╵
-
-Do you want to perform these actions?
-  Terraform will perform the actions described above.
-  Only 'yes' will be accepted to approve.
-
-  Enter a value: yes
-
-aws_s3_bucket_object.finance-2020: Creating...
-aws_s3_bucket_object.finance-2020: Creation complete after 1s [id=finance-2020.doc]
-╷
-│ Warning: Deprecated Resource
-│
-│   with aws_s3_bucket_object.finance-2020,
-│   on main.tf line 13, in resource "aws_s3_bucket_object" "finance-2020":
-│   13:  resource "aws_s3_bucket_object" "finance-2020" {
-│
-│ use the aws_s3_object resource instead
-╵
-╷
-│ Warning: Argument is deprecated
-│
-│   with aws_s3_bucket_object.finance-2020,
-│   on main.tf line 15, in resource "aws_s3_bucket_object" "finance-2020":
-│   15:    key  = "finance-2020.doc"
-│
-│ key is deprecated. Use the aws_s3_object resource instead.
-│
-│ (and one more similar warning elsewhere)
-╵
-
-Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
-PS C:\Users\shabb\OneDrive\Desktop\AWS\s3b>
+Global options (use these before the subcommand, if any):
+  -chdir=DIR    Switch to a different working directory before executing the
+                given subcommand.
+  -help         Show this help output, or the help for a specified subcommand.
+  -version      An alias for the "version" subcommand.
