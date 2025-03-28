@@ -1,3 +1,4 @@
+&&&&&&&&&&&&&&&
 Usage: terraform [global options] <subcommand> [args]
 
 The available commands for execution are listed below.
